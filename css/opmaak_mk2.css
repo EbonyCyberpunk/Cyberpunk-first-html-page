@@ -1,0 +1,202 @@
+/* CSS bij ECO-start met float  */
+
+/* import url("reset.css");  or @import "reset.css" - voor het resetten van de CSS default browser opmaak*/
+
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css";
+@import "https://fonts.googleapis.com/css?family=Roboto+Slab:400,700";
+
+
+body{
+    
+
+    
+    font: 400 100%/1.4 'Roboto Slab', Times, serif;
+   
+    background: green url(/images/bg.jpg) no-repeat center/cover fixed
+    
+    /* background-color-background-image-background repeat - background position/back-ground size - background-attachment */ 
+    
+}
+
+
+/* fix voor float  */
+.floatfix { 
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+    _overflow: visible;
+}
+
+/* Paddingfix */
+
+* { box-sizing: border-box; } /* geen enkel element zal de border of de padding optellen aan de breedte of de hoogte */
+
+.container{
+    
+    width: 1000px;
+    margin: 0 auto;
+    
+}
+
+/* HEADER ---------------------------------------------*/
+
+header#mainheader{
+    
+    height:150px;
+    background: white;
+    
+}
+
+header#mainheader img{ height: 100%;}
+
+
+/* Navigatie -----------------------------------------*/
+
+
+nav#mainnav {
+    height: 50px;
+    background: black;
+
+}
+
+nav#mainnav a {
+    
+    display:block;
+    float: left;
+    padding: 0 2em;
+    border-right: 1px solid #666;
+    line-height: 50px; /* evenveel ruimte als de height nav#mainnav , voor het centreren van de tekst in de navigatie balk */
+    color: #CCC;
+    text-decoration: none;
+    
+    
+}
+
+nav#mainnav li:last-child a {border-right: none;} /* Pseudo class , je kan ook li:last-of-type gebruiken */
+
+/* nav#mainnav li:nth-last-of-type(1) a { color: pink;} */
+
+
+nav#mainnav a:hover,
+nav#mainnav a.actief{
+    background: olive;
+    color: white;
+}
+
+
+
+/* Navigatie zonder float ----------------------------*/
+
+
+/*
+
+nav#mainnav {
+    height:50px;
+    background: black;
+}
+
+nav#mainnav ul li { 
+
+display:inline; // nodig voor de nav zonder float
+background:yellow;
+margin-right: -4px; // zet de inline elementen tegen elkaar , inline elementen heeft altijd wat ruimte tussen elkaar, nodig voor de nav zonder float
+
+}
+
+nav#mainnav ul { text-align: center } // kan niet met float - voordeel tov een nav met float
+
+nav#mainnav a {
+    
+    display:inline-block; //nodig voor de nav zonder float
+    height: 50px;
+    padding: 0 2em;
+    border-right: 1px solid #666;
+    line-height: 50px; 
+    color: #CCC;
+    text-decoration: none;
+    
+    
+}
+
+nav#mainnav li:last-child a {border-right: none;}
+
+nav#mainnav a:hover,
+nav#mainnav a.actief{
+    background: olive;
+    color: white;
+}
+
+*/
+
+
+/* Main---------------------------------------------*/
+
+main {background: white}
+
+main section{
+    float: left;
+    /* width: calc(840px - 4em); */
+    width: 840px;
+    padding: 2em; 
+    background: white;
+
+    
+}
+
+main aside {
+    float: left;
+    width: 160px;
+    padding: 2em 20px; /* main section heeft 2em aan padding , en om de banner op de zelfde hoogte te krijgen , geven we 2em mee (zelfde als main section*/
+    background: #EEE;
+}
+
+h1 {
+    font-size: 2rem; /* rem kijgt naar de root, em kijkt naar de child  */
+    margin-bottom: 2rem;
+}
+
+main article {
+    column-count: 2;
+    column-span: 1em;
+}
+
+main article img { 
+    width: 40%;
+    float: left;
+    margin-right: 1em;
+    margin-top: 10px;
+}
+
+main article p { margin-bottom: 2em;}
+
+p.inleiding {
+    line-height: 2;
+    font-size: 1.1rem;
+    color: olive;
+}
+
+
+/* Footer ------------------------------------------------------------------------------*/
+
+footer {
+    background: #333;
+    padding: 2em 2em 6em;
+    color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
